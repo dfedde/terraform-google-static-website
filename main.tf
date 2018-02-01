@@ -5,7 +5,7 @@ resource "google_compute_url_map" "default" {
 
 resource "google_compute_backend_bucket" "default" {
   name = "${var.name}-backend-bucket"
-  bucket_name = "${var.name}"
+  bucket_name = "${var.bucket}"
   enable_cdn = true
 }
 
