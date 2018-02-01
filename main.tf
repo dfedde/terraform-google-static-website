@@ -15,7 +15,7 @@ resource "google_compute_target_http_proxy" "default" {
 }
 
 resource "google_compute_global_forwarding_rule" "default" {
-  name = "default-rule"
+  name = "${var.name}-forwarding-rule"
   target = "${google_compute_target_http_proxy.default.self_link}"
   port_range = "80"
 }
